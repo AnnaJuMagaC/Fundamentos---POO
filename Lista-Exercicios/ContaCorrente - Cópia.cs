@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lista_Exercicios
+{
+    internal class ContaCorrenteEncapsulada : ContaGenerica
+    {
+        private ContaCorrenteEncapsulada(string banco, int agencia, int conta, decimal saldo, decimal limite)
+            : base(banco, agencia, conta, saldo)
+        {
+            this.Limite = limite;
+        }
+        private decimal Limite { get; set; }
+    }
+}
+
