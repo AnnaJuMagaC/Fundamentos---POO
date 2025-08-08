@@ -7,7 +7,7 @@ internal class Program
     public static void Main(string[] args)
     {
         Console.WriteLine("*************************** Lista de Exercícios ***************************");
-        Console.WriteLine("\nExercício 01");
+        Console.WriteLine("\nExercício 01\n");
 
         Livro livro1 = new Livro();
         livro1.Titulo = "O Senhor dos Anéis";
@@ -33,7 +33,7 @@ internal class Program
         Console.WriteLine($"3. {livro3.Titulo} - {livro3.Autor} ({livro3.AnoLancamento}) - Editora: {livro3.Editora}");
 
         Console.WriteLine("\n===========================================================================");
-        Console.WriteLine("\nExercício 02");
+        Console.WriteLine("\nExercício 02\n");
 
         Aluno aluno1 = new Aluno();
         aluno1.RM = 123456;
@@ -59,7 +59,7 @@ internal class Program
         Console.WriteLine($"3. RM: {aluno3.RM}, Nome: {aluno3.Nome}, Nascimento: {aluno3.Nascimento}, Email: {aluno3.Email}");
         Console.WriteLine("\n===========================================================================");
 
-        Console.WriteLine("\nExercício 03");
+        Console.WriteLine("\nExercício 03\n");
 
         Produto produto1 = new Produto();
         produto1.Codigo = 101;
@@ -84,7 +84,7 @@ internal class Program
 
         Console.WriteLine("\n===========================================================================");
 
-        Console.WriteLine("\nExercício 04");
+        Console.WriteLine("\nExercício 04\n");
 
         Carro carro1 = new Carro("Jeep", "Renegade", 70);
         Console.WriteLine($"1. Velocidade Atual: {carro1.Velocidade}");
@@ -116,7 +116,7 @@ internal class Program
 
         Console.WriteLine("\n===========================================================================");
 
-        Console.WriteLine("\nExercício 05");
+        Console.WriteLine("\nExercício 05\n");
 
         Funcionario funcionario1 = new Funcionario("Ana", 30, "Professora");
         funcionario1.Envelhecer(5); // Envelhece 5 anos
@@ -130,7 +130,7 @@ internal class Program
 
         Console.WriteLine("\n===========================================================================");
 
-        Console.WriteLine("\nExercício 06");
+        Console.WriteLine("\nExercício 06\n");
 
         Gato gato = new Gato("Gato", "Mingau");
         gato.EmitirSom();
@@ -143,7 +143,7 @@ internal class Program
 
         Console.WriteLine("\n===========================================================================");
 
-        Console.WriteLine("\nExercício 08");
+        Console.WriteLine("\nExercício 07/08\n");
 
         var conta1 = new ContaGenerica("Santander", 123, 123456789, 100000);
         var conta2 = new ContaGenerica("Bradesco", 456, 987654331, 200000);
@@ -154,6 +154,7 @@ internal class Program
         Console.WriteLine($"Banco: {conta2.Banco}| Agência: {conta2.Agencia}| Conta: {conta2.Conta}| Saldo: {conta2.Saldo}");
         Console.WriteLine($"Banco: {conta3.Banco}| Agência: {conta3.Agencia}| Conta: {conta3.Conta}| Saldo: {conta3.Saldo}");
         Console.WriteLine($"Banco: {conta3.Banco}| Agência: {conta3.Agencia}| Conta: {conta3.Conta}| Saldo: {conta3.Saldo}| Limite: {conta4.Limite}");
+
         conta1.Sacar(2500);
         Console.WriteLine($"\nBanco: {conta1.Banco}| Agência: {conta1.Agencia}| Conta: {conta1.Conta}| Saldo: {conta1.Saldo}");
         conta2.Sacar(980);
@@ -164,9 +165,26 @@ internal class Program
         Console.WriteLine($"Banco: {conta4.Banco}| Agência: {conta4.Agencia}| Conta: {conta4.Conta}| Saldo: {conta4.Saldo}| Limite: {conta4.Limite}");
 
         Console.WriteLine("\n===========================================================================");
+        Console.WriteLine("\nExercício 09");
 
-        Console.WriteLine("\nExercício 11");
+        Personagem personagem1 = new Personagem("Merlin", "Mago", 10, 25, 85, 100, 100);
+        Personagem personagem2 = new Personagem("Arthur", "Guerreiro", 12, 90, 75, 70, 80);
+        Personagem personagem3 = new Personagem("Lancelot", "Cavaleiro", 11, 100, 68, 35, 90);
 
+        personagem1.ExibirStatus();
+        personagem2.ExibirStatus();
+        personagem3.ExibirStatus();
+
+        Console.WriteLine("\n===========================================================================");
+
+        Console.WriteLine("\nExercício 11\n");
+
+        Forma forma1 = new Retangulo(5, 3);
+        Forma forma2 = new Circulo(4);
+
+        // Aplicando polimorfismo
+        Console.WriteLine($"Área do Retângulo: {forma1.CalcularArea()}");
+        Console.WriteLine($"Área do Círculo: {forma2.CalcularArea():F2}");
 
 
     }

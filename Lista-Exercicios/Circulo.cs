@@ -6,7 +6,18 @@ using System.Threading.Tasks;
 
 namespace Lista_Exercicios
 {
-    internal class Circulo
+    public class Circulo : Forma
     {
+        public double Raio { get; set; }
+
+        public Circulo(double raio)
+        {
+            Raio = raio;
+        }
+
+        public override double CalcularArea()
+        {
+            return Math.PI * Raio * Raio;
+        }
     }
 }
